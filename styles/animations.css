@@ -15,6 +15,7 @@
   }
   100% {
     transform: scale(1.25);
+    
   }
 }
 
@@ -22,15 +23,18 @@
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 .like-icon.is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s 1 forwards;
+  animation: heart-scale 0.3s ease-in 0.1s 1 normal;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks-opacity 0.3s ease-in 0.3s forwards;
+  animation: sparks-opacity 0.3s ease-in 0.3s;
 }

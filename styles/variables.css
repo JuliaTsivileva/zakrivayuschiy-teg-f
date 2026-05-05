@@ -9,7 +9,7 @@
   --bg-color: #FFF;
   --bg-image: url(../images/svg/background.svg);
   --color-first: #d3d3d3;
-  --color-first-transparency: rgb(211, 211, 211, 0);
+  --color-first-transparency: rgba(211, 211, 211, 0);
   --color-second: #e7e7e7;
   --color-third: #1a1a1a;
   --border-color: #000;
@@ -17,7 +17,7 @@
     repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
-      rgb(211, 211, 211, 0) 2px 4px),
+      rgba(211, 211, 211, 0) 2px 4px),
     repeating-linear-gradient(
       to bottom,
       var(--color-first, #d3d3d3) 0 2px,

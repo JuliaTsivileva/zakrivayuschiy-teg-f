@@ -130,7 +130,7 @@
             class="card__image card__image-saturation-down"
             loading="lazy"
             src="./images/bus.jpg"
-            alt="дом на колесах ночью в фиолетовых оттенках"
+            alt="дом на колесах ночью. обработка фотографии, снижение насыщенности"
           >
         </div>
         <div class="card__description">
@@ -196,7 +196,7 @@
             class="card__image card__image-neon"
             loading="lazy"
             src="./images/bus.jpg"
-            alt="дом на колесах ночью в фиолетовых оттенках"
+            alt="дом на колесах ночью в неоновой обработке"
           >
         </div>
         <div class="card__description">
@@ -262,7 +262,7 @@
             class="card__image card__image-vintage"
             loading="lazy"
             src="./images/bus.jpg"
-            alt="дом на колесах ночью в фиолетовых оттенках"
+            alt="дом на колесах ночью в винтажной обработке"
           >
         </div>
         <div class="card__description">
@@ -526,7 +526,7 @@
             class="card__image card__image-multifilter"
             loading="lazy"
             src="./images/bus.jpg"
-            alt="дом на колесах ночью в фиолетовых оттенках"
+            alt="дом на колесах ночью с применением разных фильтров"
           >
         </div>
         <div class="card__description">
@@ -544,6 +544,7 @@
           <button
             class="button card__icon-button"
             type="button"
+            aria-label="Поставить лайк"
           >
             <svg 
             xmlns="http://www.w3.org/2000/svg"
@@ -587,7 +588,7 @@
         <button
           type="button"
           onclick="window['dialog-id'].showModal();"
-          class="save-container__button-show-modal button"
+          class="save-container__button-show-modal"
           aria-controls="dialog-id"
         >
           <svg
@@ -611,12 +612,12 @@
             viewBox="0 0 29 28"
             class="dialog-container__diskette-icon"
           >
-            <use xlink:href="./svg/diskette.svg#diskette"></use>
+            <use href="./svg/diskette.svg#diskette"></use>
           </svg>
           <p class="dialog-container__text button-show-text">
             Вставьте дискету, чтобы продолжить
           </p>
-          <button class="dialog-container__button-ok button" type="submit">
+          <button class="dialog-container__button-ok" type="submit">
             <span class="button__text">ОК</span>
           </button>
         </div>
