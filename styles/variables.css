@@ -1,1 +1,36 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font: 'Inter', sans-serif;
+  --font-accent: 'PressStart2P', sans-serif;
+  --text-color: #000;
+  --text-size: 18px;
+  --heading-font-weight: 700;
+  --description-font-weight: 400;
+  --bg-color: #FFF;
+  --bg-image: url(../images/svg/background.svg);
+  --color-first: #d3d3d3;
+  --color-first-transparency: rgb(211, 211, 211, 0);
+  --color-second: #e7e7e7;
+  --color-third: #1a1a1a;
+  --border-color: #000;
+  --bg-image-gradient: 
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      rgb(211, 211, 211, 0) 2px 4px),
+    repeating-linear-gradient(
+      to bottom,
+      var(--color-first, #d3d3d3) 0 2px,
+      var(--color-first-transparency, rgba(211, 211, 211, 0)) 2px 4px),
+    linear-gradient(
+      to bottom,
+      var(--color-second, #e7e7e7 ) 0.01%,
+      var(--color-third, #1a1a1a ) 100%
+    );
+  --contour-color: #000;
+  --main-body-color: transparent;
+  --core-color: transparent;
+  --animation-fill-color: #ff0000;
+  --liked-color: #ff0000;
+  --sparks-opacity: 0;
+}
