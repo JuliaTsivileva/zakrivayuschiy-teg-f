@@ -23,6 +23,7 @@
   font-size: var(--text-size, 18px);
   padding-block-start: 100px;
   display: grid;
+  margin-bottom: 100px;
 }
 
 .header {
