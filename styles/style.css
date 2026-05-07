@@ -14,7 +14,7 @@
   min-block-size: 100dvb;
   font-family: var(--font, 'Inter'), 'Arial', sans-serif;
   font-variation-settings: 'wght' var(--description-font-weight, 400);
-  background-color: var(--bg-color, #FFF);
+  background-color: var(--bg-color, #fff);
   background-image: var(--bg-image);
   background: var(--bg-image-gradient);
   background-size: cover;
@@ -58,7 +58,6 @@
   text-align: center;
 }
 
-
 .card-container {
   display: grid;
   row-gap: 50px;
@@ -75,7 +74,7 @@
 .card__title {
   font-size: 18px;
   font-weight: var(--heading-font-weight);
-  font-variation-settings: 'wght' var(--heading-font-weight);
+  font-variation-settings: "wght" var(--heading-font-weight);
   padding: 4px 10px;
 }
 
@@ -97,6 +96,8 @@
 
 .card__logo {
   position: absolute;
+  width: 98px;
+  height: 14px;
   top: 25px;
   right: 25px;
   font-family: var(--font-accent);
@@ -105,14 +106,10 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   z-index: 1;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
-@supports (
-  (-webkit-text-stroke: 1px var(--bg-color)) or
-  (text-stroke: 1px var(--bg-color))
-)
-{
+@supports ((-webkit-text-stroke: 1px var(--bg-color)) or (text-stroke: 1px var(--bg-color))) {
   .card__logo {
     -webkit-text-stroke: 1px var(--bg-color);
     text-stroke: 1px var(--bg-color);
@@ -215,10 +212,10 @@
 }
 
 .card__icon-button:focus {
-   outline: none;
+  outline: none;
 }
 
-  .card__icon-button:focus-visible {
+.card__icon-button:focus-visible {
   outline: 2px solid var(--contour-color);
   outline-offset: 2px;
 }
@@ -252,7 +249,7 @@
 }
 
 .like-icon:hover {
-   border: none;
+  border: none;
 }
 
 .like-icon:active .main-body {
@@ -284,33 +281,34 @@
   align-items: center;
   justify-self: center;
   justify-content: center;
-  inline-size: clamp(19.125rem,  calc(19.125rem + 0.08923 * (100vw - 23.4375rem)), 20.9375rem);
-  block-size: clamp(3.4375rem, calc(5.25rem - 0.08923 * (100vw - 23.4375rem)), 5.25rem);
+  inline-size: clamp(306px, 295.7887px + 2.723vw, 335px);
+  block-size: clamp(55px, 94.2113px + -2.723vw, 84px);
   gap: 8px;
 }
 
 .button__diskette-icon {
   display: block;
   block-size: auto;
+  justify-self: end;
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--bg-color);
   margin: 0;
-  max-inline-size: clamp(21px, 31.8169px - 0.7512vw, 28px);
+  inline-size: clamp(21px, 30.8592px + -0.6845vw, 28px);
+  inline-size: clamp(21px, 30.8592px + -0.6845vw, 28px);
 }
 
 .button-show-text {
   font-family: var(--font-accent);
+  justify-self: start;
 }
 
 .dialog-window {
   border: 2px solid var(--border-color);
-  border-radius: 0;
-  inline-size: clamp(341px, 336px + 1vw, 353px);
-  padding: 30px 40px;
-  position: fixed;
-  inset: 0;
-  margin: auto;
+  justify-self: center;
+  inline-size: clamp(341px, 336.7746px + 1.1268vw, 353px);
+  padding-inline: 37px;
+  padding-block: 30px;
 }
 
 .dialog-window::backdrop {
@@ -319,11 +317,22 @@
 
 .dialog-container {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 39px 1fr;
   column-gap: 20px;
   row-gap: 30px;
-  width: clamp(261px, 249.7324px + 3.0047vw, 293px);
-  max-inline-size: 261px;
+}
+
+@media (width >= 700px) {
+  .button__diskette-icon {
+    justify-self: center;
+  }
+
+  .button-show-text {
+    justify-self: center;
+  }
+  .dialog-window {
+    padding: 30px;
+  }
 }
 
 .dialog-container__diskette-icon {
@@ -333,7 +342,6 @@
 }
 
 .dialog-container__text {
-  max-inline-size: 234px;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -343,10 +351,8 @@
   grid-column: 1 / -1;
   inline-size: 100%;
   min-block-size: 38px;
-  padding: 5px;
   text-transform: uppercase;
 }
-
 
 .card__image-saturation-down {
   filter: sepia(0.6) saturate(60%) brightness(80%);
@@ -376,15 +382,14 @@
   filter: invert(80%) hue-rotate(0.7turn) brightness(60%);
 }
 
-
-@media (width <= 375px){
-
+@media (width <= 375px) {
   .button-show-modal {
     flex-direction: column;
   }
 
- .button__diskette-icon {
-    margin: 15px 0;}
+  .button__diskette-icon {
+    margin: 15px 0;
+  }
 
   .button-show-text {
     padding-block-start: 7px;
