@@ -62,6 +62,7 @@
   display: grid;
   row-gap: 50px;
   justify-self: center;
+  align-self: center;
   inline-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
 }
 
@@ -74,7 +75,7 @@
 .card__title {
   font-size: 18px;
   font-weight: var(--heading-font-weight);
-  font-variation-settings: "wght" var(--heading-font-weight);
+  font-variation-settings: 'wght' var(--heading-font-weight);
   padding: 4px 10px;
 }
 
